@@ -43,19 +43,26 @@ const App = () => {
 
   const isAdmin = true;
   function myFunction() {
-    // const isAdmin = true;
+    const isAdmin = true;
     
-    //   if(isAdmin){
+      // if(isAdmin){
       //     return <Text>Admin kullanıcısı</Text>;
       //   }
       //   else {
-        //     return <Text>Normal kullanıcısı</Text>;
-        //   }
-        // }
+      //       return <Text>Normal kullanıcısı</Text>;
+      //     }
+      //   }
         
         // if (isAdmin) return <Text>Admin kullanıcısı</Text>;
         
         // return <Text>Normal kullanıcı</Text>;
+
+        // if (isAdmin) {
+        //   return <Text>Admin kullanıcısı</Text>;
+        // }
+        // else return null;
+        
+        // ternary
         return isAdmin ?  <Text>Admin kullanıcısı</Text> : null
       }
 
@@ -67,27 +74,37 @@ const App = () => {
     const myArray = ["İzmir", "İstanbul", "Ankara", "Adana"];
 
     return myArray.map((city) => {
+      
       return <Text>{city}</Text>;
     });
   }
 
   return (
-    // <SafeAreaView>  // IOS ta kullanılıyor. çentikli yapı için verileri aşağıya alır
+    //s <SafeAreaView>  // IOS ta kullanılıyor. çentikli yapı için verileri aşağıya alır
     <>
       <View style={styles.container}>
         <Text style={styles.text}>CLARUSWAY!</Text>
       </View>
 
+      {/* değişken/ işlem tanımlama {değişken_adı} {2+5} */}
       <MyComponent />
       <Text style={styles.hello}>Merhaba {my_name}</Text>
+      <Text style={styles.hello}>Sonuç:  {4 + 5}</Text>
       
+      {/* func çalıştırma "return" edilen değer gelir "return" yoksa yada component yapısına uymuyorsa hata alırız yada ekranda birşey görülmez
+      */}
+      {/* birden fazla Text vs. yapı kullanılacaksa View ile sarmalanmalı ve bir component yapısı oluşturulmalıdır (sadece bir adet ana component değer döndürülür) style vs. yapılmayacak ise fragment yapısı da kullanılabilir <></> */}
+      {/* regular yada arrow func kullanılabilir */}
+      {/* Component isimlerinin ilk harfi büyük olmalı */}
       {myFunction()}
       {myFunction1("Kenan")}
       {myFunction2()}
       
-      {isAdmin ?  <Text>Admin kullanıcısı</Text> : null}
+      {/* if yazılmaz ama ternary yazılabilir  */}
+      {isAdmin ?  <Text>Admin kullanıcısı</Text> : null}  
       
-      {isAdmin && <Text>Admin kullanıcısı</Text>}
+      {/* and operator */}
+      {isAdmin && <Text>Admin kullanıcısı</Text>}  
       
     </>
   );

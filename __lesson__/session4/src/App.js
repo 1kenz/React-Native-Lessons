@@ -1,31 +1,69 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+import { SafeAreaView, View, Text, Button } from 'react-native';
 
 const App = () => {
-  return (
-    <SafeAreaView style={{flex: 1}}>
-      <View style={styles.container}>
-        <View style={styles.inputContainer}>
-          <TextInput
-            keyboardType="email-address"
-            placeholder="Aramak istediğiniz ürünü giriniz.."
-          />
-        </View>
 
-        <TouchableOpacity style={styles.buttonContainer}>
-          <Text style={styles.textStyle}>Ara</Text>
-        </TouchableOpacity>
+  const pressFunction = () => {
+    //! Spread Operator
+    const user = {
+      name: "Ezran",
+      age: 28,
+      isAdmin: false
+    }
+
+    const member = {
+      name: user.name,
+      age: user.age,
+      isAdmin: user.isAdmin,
+      password: "12345",
+      type: null
+    }
+
+    const myArr = [1, 2, 3, 4];
+    const secArr = [ "İzmir", "Ankara", ...myArr  ]
+
+    const newArr = [...myArr]
+
+    // console.log(secArr)
+    // console.log(newArr)
+
+    //! Destruction Operator
+    const myObj = {
+      url: "www.google.com",
+      data: [1, 2, 3],
+      config: "EMPTY"
+    }
+
+    const {config, url} = myObj
+
+    console.log(config);
+    console.log(url);
+
+    //
+    // (event) => {
+      // event.target
+      //
+      //
+      //
+    //   event.domain
+    // }
+
+    ({target, domain}) => {
+      target
+      //
+      //
+      //
+      domain
+    }
+
+
+  }
+
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Hello React Native </Text>
+        <Button title='Log' onPress={pressFunction} />
       </View>
     </SafeAreaView>
   );
@@ -33,30 +71,15 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#e0e0e0',
-    justifyContent: 'center'
-  },
-  inputContainer: {
-    backgroundColor: 'white',
-    padding: 10,
-    margin: 5,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 10,
-  },
-  buttonContainer: {
-    backgroundColor: 'blue', 
-    padding: 10,
-    margin: 20,
-    borderRadius: 5,
-    alignItems: 'center'
-  },
-  textStyle: {
-    fontSize: 17,
-    color: 'white',
-    fontWeight: 'bold'
-  }
-});
+{/* 
+  <Button title='Log' onPress={pressFunction} />
+  =>
+  <Button title='Log' onPress={() => {
+      console.log("Merhaba!")
+    }} />
+
+
+  <Button title='Log' onPress={pressFunction()} />
+  =>
+  <Button title='Log' onPress={console.log("Merhaba!")} />
+*/}
