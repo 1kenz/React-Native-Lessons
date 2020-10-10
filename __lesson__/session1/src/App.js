@@ -2,6 +2,11 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react-native/no-inline-styles */
+/*TODO HTML attribute style=""
+/*TODO RN attribute style={}
+/* TODO attribute = {}
+/* camelCase kullanılıyor
+*/
 import React from 'react';
 import {
   SafeAreaView,

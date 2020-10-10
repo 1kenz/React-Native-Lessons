@@ -1,6 +1,12 @@
-import React from 'react';
-import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
-import MyComponent from './components/MyComponent';
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable react-native/no-inline-styles */
+/*TODO HTML attribute style=""
+/*TODO RN attribute style={}
+/* TODO attribute = {}
+/* camelCase kullanılıyor
+*/
 /**
  * HTML
  * style=""
@@ -10,20 +16,23 @@ import MyComponent from './components/MyComponent';
  * camelCase kullanılıyor
  * 
  *   <View style={{
-        backgroundColor:"purple",
-        padding:10,
-        margin:20,
-      }
-      }>
-        <Text style={{
-        color:"white",
-      }
-      }>CLARUSWAY!</Text>
-      </View>
- * 
- * 
- */
+  backgroundColor:"purple",
+  padding:10,
+  margin:20,
+}
+}>
+<Text style={{
+  color:"white",
+}
+}>CLARUSWAY!</Text>
+</View>
+* 
+* 
+*/
 
+import React from 'react';
+import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import MyComponent from './components/MyComponent';
 const App = () => {
   // return null;
   const my_name = 'xkendx';
