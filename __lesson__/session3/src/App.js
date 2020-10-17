@@ -55,10 +55,8 @@ const App = () => {
         {food_data.map((food) => {
           return (
             <MyBanner
-              title={food.title}
-              desc={food.desc}
-              color={food.color}
-              isActive={food.isActive}
+            <Text>{props.todo}</Text>
+
             />
           );
         })}
