@@ -13,8 +13,17 @@ const Stack = createStackNavigator();
 function Router() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="FirstPage" component={First} />
+      <Stack.Navigator
+        // initialRouteName="SecondPage"
+        screenOptions={{
+          headerShown: false,
+          gestureEnabled: true,
+        }}>
+        <Stack.Screen
+          name="FirstPage"
+          component={First}
+          options={{ title: "Gönderilen" }}
+        />
         <Stack.Screen name="SecondPage" component={Second} />
       </Stack.Navigator>
     </NavigationContainer>
