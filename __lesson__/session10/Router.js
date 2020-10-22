@@ -1,31 +1,39 @@
-// In App.js in a new project
-
 import * as React from "react";
-import { View, Text } from "react-native";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import First from "./src/pages/First";
-import Second from "./src/pages/Second";
+import { Friends, Timeline, Post } from "./src/pages";
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function MainComponent() {
+  return (
+    <Stack.Navigator initialRouteName="PostPage">
+      <Stack.Screen name="MainPage" component={Timeline} />
+      <Stack.Screen name="PostPage" component={Post} />
+    </Stack.Navigator>
+  );
+}
 
 function Router() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        // initialRouteName="SecondPage"
-        screenOptions={{
-          headerShown: false,
-          gestureEnabled: true,
-        }}>
+        initialRouteName="MainComponentPage"
+        tabBarOptions={{ activeTintColor: "purple" }}>
         <Tab.Screen
-          name="FirstPage"
-          component={First}
-          options={{ title: "Gönderilen" }}
+          name="FriendsPage"
+          component={Friends}
+          options={{ title: "Arkadaşlar" }}
         />
-        <Stack.Screen name="SecondPage" component={Second} />
+        <Tab.Screen
+          name="MainComponentPage"
+          component={MainComponent}
+          options={{ title: "Ana Sayfa" }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
