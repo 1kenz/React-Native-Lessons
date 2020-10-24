@@ -52,7 +52,14 @@ const post_data = [
 
 const Timeline = (props) => {
   const renderPostData = ({ item }) => {
-    return <PostCard post={item} />;
+    return (
+      <PostCard
+        post={item}
+        onSelect={() =>
+          props.navigation.navigate("PostPage", { selectedPost: item })
+        }
+      />
+    );
   };
 
   return (

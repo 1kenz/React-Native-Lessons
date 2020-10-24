@@ -31,14 +31,14 @@ const App = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <Text style={styles.banner}>Clarushop</Text>
-        <SearchBar getName={(val) => setSearchValue(val)} />
+         
 
-        {/* <View style={styles.searchBar}>
+        <View style={styles.searchBar}>
           <TextInput
             placeholder="Ürün ara..."
             onChangeText={(value) => setSearchValue(value)}
           />
-        </View> */}
+        </View>
         <FlatList
           keyExtractor={(_, index) => index.toString()}
           data={displayList}
