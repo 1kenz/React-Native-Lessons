@@ -14,12 +14,7 @@ const Component_A = (props) => {
         justifyContent: "center",
         // alignItems: "center",
       }}>
-      <Text
-        style={{
-          textAlign: "left",
-        }}>
-        Component_A
-      </Text>
+      <Text style={{ textAlign: "left" }}>Component_A</Text>
       <Text
         style={{
           fontSize: 25,
