@@ -1,22 +1,18 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { View, Text } from 'react-native';
+import { useSelector } from 'react-redux';
 
-const Component_B = (props) => {
-  const ourCounter = useSelector((myGlobalStale) => myGlobalStale.counter);
+const Component_B = () => {
+    const ourCounter = useSelector(myGlobalState => myGlobalState.counter);
+    const myUserName = useSelector(canim => canim.userName);
 
-  return (
-    <View style={{ backgroundColor: "#bdbdbd", flex: 1 }}>
-      <Text>Component_B</Text>
-      <Text
-        style={{
-          fontSize: 25,
-          textAlign: "center",
-        }}>
-        Counter: {ourCounter}
-      </Text>
-    </View>
-  );
+    return (
+        <View style={{ backgroundColor: '#bdbdbd', flex: 1 }}>
+            <Text>Component_B</Text>
+            <Text style={{ fontSize: 50 }}>Counter: {ourCounter}</Text>
+            <Text style={{ fontSize: 50 }}>Name: {myUserName}</Text>
+        </View>
+    );
 };
 
 export default Component_B;
