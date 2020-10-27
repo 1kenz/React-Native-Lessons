@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native";
 import Component_A from "./pages/Component_A";
 import Component_B from "./pages/Component_B";
 
-import { reducer, store } from "./context";
+import { reducer, initialState } from "./context";
 
 const Main = (props) => {
   return (
