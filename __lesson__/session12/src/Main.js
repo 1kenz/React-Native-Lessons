@@ -4,6 +4,8 @@ import { SafeAreaView } from "react-native";
 import Component_A from "./pages/Component_A";
 import Component_B from "./pages/Component_B";
 
+import { reducer, store } from "./context";
+
 const Main = (props) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
