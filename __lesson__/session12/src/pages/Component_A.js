@@ -7,8 +7,34 @@ const Component_A = (props) => {
   const dispatch = useDispatch();
 
   return (
-    <View style={{ backgroundColor: "#eceff1", flex: 1 }}>
-      <Text>Component_A</Text>
+    <View
+      style={{
+        backgroundColor: "#eceff1",
+        flex: 1,
+        justifyContent: "center",
+        // alignItems: "center",
+      }}>
+      <Text
+        style={{
+          textAlign: "left",
+        }}>
+        Component_A
+      </Text>
+      <Text
+        style={{
+          fontSize: 25,
+          textAlign: "center",
+        }}>
+        Counter: {myCounter}
+      </Text>
+      <Button
+        title="Increase"
+        onPress={() => dispatch({ type: "INCREASE_COUNTER" })}
+      />
+      <Button
+        title="Decrease"
+        onPress={() => dispatch({ type: "DECREASE_COUNTER" })}
+      />
     </View>
   );
 };
