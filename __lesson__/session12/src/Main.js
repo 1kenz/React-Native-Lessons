@@ -1,10 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { SafeAreaView } from "react-native";
 
-export default function Main() {
+import Component_A from "./pages/Component_A";
+import Component_B from "./pages/Component_B";
+
+const Main = (props) => {
   return (
-    <View>
-      <Text>Welcome</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Component_A />
+      <Component_B />
+    </SafeAreaView>
   );
-}
+};
+
+export default Main;
