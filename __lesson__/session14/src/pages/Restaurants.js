@@ -1,4 +1,4 @@
-import Axios from "axios";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, Text, View, FlatList } from "react-native";
 
@@ -7,26 +7,14 @@ import { RestaurantItem } from "../components";
 const Restaurants = (props) => {
   const [list, setList] = useState([]);
 
-   const fetchData = () => {
-    Axios
-      .post(
-        "https://worldwide-restaurants.p.rapidapi.com/search",
-        {
-          limit: "30",
-          language: "en_US",
-          location_id: "297704",
-          currency: "USD",
+  const fetchData = () => {
+    axios
+      .get("https://opentable.herokuapp.com/api/restaurants", {
+        params: {
+          state: "IL",
         },
-        {
-          headers: {
-            "content-type": "application/json",
-            "x-rapidapi-host": "worldwide-restaurants.p.rapidapi.com",
-            "x-rapidapi-key":
-              "bf2e35a991mshde8353f3fc95d2ap125b90jsn29120143a9d7",
-          },
-        },
-      )
-      .then((response) => setList(response.data.results.data))
+      })
+      .then((response) => setList(response.data.restaurants))
       .catch((error) => console.log(error));
   };
 
@@ -38,7 +26,7 @@ const Restaurants = (props) => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <Text style={{ fontSize: 25, textAlign: "center", fontWeight: "bold" }}>
-          Restaurants
+          Restoranlar
         </Text>
         <FlatList
           keyExtractor={(_, index) => index.toString()}
