@@ -5,7 +5,7 @@ const Favorites = (props) => {
   return (
     <SafeAreaView>
       <View>
-        <Text>Restaurants</Text>
+        <Text>Favorites</Text>
       </View>
     </SafeAreaView>
   );
