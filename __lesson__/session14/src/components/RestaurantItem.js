@@ -1,11 +1,13 @@
-import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 
 const RestaurantItem = ({ item }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{item.name}</Text>
-    </View>
+    <TouchableOpacity>
+      <View style={styles.container}>
+        <Text style={styles.text}>{item.name}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   text: {
-    fontWeight: '200',
+    fontWeight: "200",
   },
 });
 
