@@ -37,5 +37,9 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/xkendx/React-Native-Lessons.git",
+  "author": "xkendx <63884610+xkendx@users.noreply.github.com>",
+  "license": "MIT"
 }
