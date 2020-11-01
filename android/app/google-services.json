@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "154425831200",
-    "firebase_url": "https://clarusway2114.firebaseio.com",
-    "project_id": "clarusway2114",
-    "storage_bucket": "clarusway2114.appspot.com"
+    "project_number": "488709863506",
+    "firebase_url": "https://claruswayfirebase.firebaseio.com",
+    "project_id": "claruswayfirebase",
+    "storage_bucket": "claruswayfirebase.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:154425831200:android:ddbe097ea8c3e3744b3145",
+        "mobilesdk_app_id": "1:488709863506:android:644a88fb5b88baa48c478b",
         "android_client_info": {
           "package_name": "com.practiceproject"
         }
       },
       "oauth_client": [
         {
-          "client_id": "154425831200-svsjqejsuh7v76vjidmm50m2rth7fh1p.apps.googleusercontent.com",
+          "client_id": "488709863506-jjpeu55a8eap0aqdj7i7j6lbbpopo5tn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAn1VRkTj4-qjZWpKgNIInrPeXpw6H2rnc"
+          "current_key": "AIzaSyDGao1Bt0lq5UioJOylJfVZTIwrqAtBhPM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "154425831200-svsjqejsuh7v76vjidmm50m2rth7fh1p.apps.googleusercontent.com",
+              "client_id": "488709863506-jjpeu55a8eap0aqdj7i7j6lbbpopo5tn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
