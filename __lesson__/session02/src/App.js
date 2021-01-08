@@ -31,7 +31,7 @@
 */
 
 import React from 'react';
-import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 import MyComponent from './components/MyComponent';
 const App = () => {
   // return null;
@@ -44,37 +44,36 @@ const App = () => {
   const isAdmin = true;
   function myFunction() {
     const isAdmin = true;
-    
-      // if(isAdmin){
-      //     return <Text>Admin kullanıcısı</Text>;
-      //   }
-      //   else {
-      //       return <Text>Normal kullanıcısı</Text>;
-      //     }
-      //   }
-        
-        // if (isAdmin) return <Text>Admin kullanıcısı</Text>;
-        
-        // return <Text>Normal kullanıcı</Text>;
 
-        // if (isAdmin) {
-        //   return <Text>Admin kullanıcısı</Text>;
-        // }
-        // else return null;
-        
-        // ternary
-        return isAdmin ?  <Text>Admin kullanıcısı</Text> : null
-      }
+    // if(isAdmin){
+    //     return <Text>Admin kullanıcısı</Text>;
+    //   }
+    //   else {
+    //       return <Text>Normal kullanıcısı</Text>;
+    //     }
+    //   }
 
-  function myFunction1(userName){
+    // if (isAdmin) return <Text>Admin kullanıcısı</Text>;
+
+    // return <Text>Normal kullanıcı</Text>;
+
+    // if (isAdmin) {
+    //   return <Text>Admin kullanıcısı</Text>;
+    // }
+    // else return null;
+
+    // ternary
+    return isAdmin ? <Text>Admin kullanıcısı</Text> : null;
+  }
+
+  function myFunction1(userName) {
     return <Text>{userName}</Text>;
   }
 
-  function myFunction2(){
-    const myArray = ["İzmir", "İstanbul", "Ankara", "Adana"];
+  function myFunction2() {
+    const myArray = ['İzmir', 'İstanbul', 'Ankara', 'Adana', 'Kocaeli'];
 
     return myArray.map((city) => {
-      
       return <Text>{city}</Text>;
     });
   }
@@ -89,23 +88,22 @@ const App = () => {
       {/* değişken/ işlem tanımlama {değişken_adı} {2+5} */}
       <MyComponent />
       <Text style={styles.hello}>Merhaba {my_name}</Text>
-      <Text style={styles.hello}>Sonuç:  {4 + 5}</Text>
-      
+      <Text style={styles.hello}>Sonuç: {4 + 5}</Text>
+
       {/* func çalıştırma "return" edilen değer gelir "return" yoksa yada component yapısına uymuyorsa hata alırız yada ekranda birşey görülmez
-      */}
+       */}
       {/* birden fazla Text vs. yapı kullanılacaksa View ile sarmalanmalı ve bir component yapısı oluşturulmalıdır (sadece bir adet ana component değer döndürülür) style vs. yapılmayacak ise fragment yapısı da kullanılabilir <></> */}
       {/* regular yada arrow func kullanılabilir */}
       {/* Component isimlerinin ilk harfi büyük olmalı */}
       {myFunction()}
-      {myFunction1("Kenan")}
+      {myFunction1('Kenan')}
       {myFunction2()}
-      
+
       {/* if yazılmaz ama ternary yazılabilir  */}
-      {isAdmin ?  <Text>Admin kullanıcısı</Text> : null}  
-      
+      {isAdmin ? <Text>Admin kullanıcısı</Text> : null}
+
       {/* and operator */}
-      {isAdmin && <Text>Admin kullanıcısı</Text>}  
-      
+      {isAdmin && <Text>Admin kullanıcısı</Text>}
     </>
   );
 };
