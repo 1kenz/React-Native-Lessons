@@ -7,6 +7,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import styles from "./App.sytles";
+
 import MyBanner from './components/MyBanner';
 import MyButton from './components/MyButton';
 
@@ -75,16 +77,4 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#0277bd',
-    padding: 10,
-    margin: 10,
-    borderRadius: 10,
-  },
-  text: {
-    textAlign: 'center',
-    color: 'white',
-    fontWeight: 'bold',
-  },
-});
+
