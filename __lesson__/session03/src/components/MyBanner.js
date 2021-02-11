@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import styles from './Styles';
+import styles from './MyBanner.styles';
 
 const MyBanner = (props) => {
   // function chechActiveStatus(){
