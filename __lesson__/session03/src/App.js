@@ -56,10 +56,11 @@ const App = () => {
       <View>
         {food_data.map((food) => {
           return (
+            <View>
             <MyBanner
-            <Text>{props.todo}</Text>
-
+              <Text>{props.todo}</Text>
             />
+            </View>
           );
         })}
 
