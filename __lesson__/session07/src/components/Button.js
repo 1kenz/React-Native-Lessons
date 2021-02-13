@@ -1,5 +1,7 @@
-import React from "react";
-import { Text, TouchableOpacity, StyleSheet } from "react-native";
+import React from 'react';
+import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+
+import myStyles from './Button.styles.js';
 
 const Button = (props) => {
   return (
@@ -7,7 +9,7 @@ const Button = (props) => {
       style={[
         myStyles.buttonContainer,
         {
-          backgroundColor: props.color === undefined ? "#a5d6a7" : props.color,
+          backgroundColor: props.color === undefined ? '#a5d6a7' : props.color,
         },
       ]}
       onPress={props.sayingHello}>
@@ -17,16 +19,3 @@ const Button = (props) => {
 };
 
 export default Button;
-
-const myStyles = StyleSheet.create({
-  buttonContainer: {
-    backgroundColor: "#a5d6a7",
-    padding: 15,
-    margin: 10,
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  textStyle: {
-    fontSize: 20,
-  },
-});
